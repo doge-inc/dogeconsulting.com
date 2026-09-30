@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doge Consulting | Fetch. Build. Ship. Eh?</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #e2e8f0;
+            --accent-hover: #38bdf8;
+            --card-bg: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #f8fafc, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        section h2 {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 0.5rem;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+        }
+
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            padding: 1.25rem;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            border-color: #475569;
+            transform: translateY(-2px);
+        }
+
+        .project-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: #f1f5f9;
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .contact-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1e293b;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        .contact-item span {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .contact-item a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-hover);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 5rem;
+            color: #475569;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header Section -->
+        <header>
+            <h1>Doge Consulting</h1>
+            <p>Technical architecture & consulting.</p>
+        </header>
+
+        <!-- About Us Section -->
+        <section>
+            <h2>About Us</h2>
+            <p class="description">
+                We deliver robust digital transformations, reliable systems engineering, and scalable web solutions. 
+                Our approach emphasizes lean execution, fast iteration cycles, and transparent project delivery.
+            </p>
+        </section>
+
+        <!-- Completed Projects Section -->
+        <section>
+            <h2>Completed Projects</h2>
+            <div class="project-list">
+                
+                <div class="project-card">
+                    <h3>Project Alpha: Cloud Migration</h3>
+                    <p>Successfully migrated a legacy financial pipeline to a serverless AWS infrastructure, reducing operating overhead by 40%.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project Beta: Automation Pipeline</h3>
+                    <p>Designed and integrated custom CI/CD automation systems for an enterprise logistics partner, optimizing delivery speed.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project Gamma: E-Commerce Architecture</h3>
+                    <p>Overhauled a high-traffic web platform, establishing zero-downtime database layers capable of supporting millions of global operations.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section>
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>Email</span>
+                    <a href="mailto:hello@dogeconsulting.com">hello@dogeconsulting.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>Location</span>
+                    <a href="#" style="pointer-events: none; cursor: default;">Toronto, ON</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Doge Consulting. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
