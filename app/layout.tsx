@@ -4,6 +4,9 @@ import { theme } from "../theme";
 
 import "@mantine/core/styles.css";
 
+import "@gfazioli/mantine-scene/styles.css";
+import "@gfazioli/mantine-scene/styles.layer.css";
+
 export const metadata = {
   title: "Doge Consulting Inc.",
   description: "Enterprise AI & Software Engineering",
