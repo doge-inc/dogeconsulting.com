@@ -2,6 +2,7 @@
 
 import { Card, Container, SimpleGrid, Text, ThemeIcon, Title } from "@mantine/core";
 import { FiBox, FiCompass, FiCpu, FiGitMerge } from "react-icons/fi";
+import { SECTION } from "../../contants/layout";
 
 const services = [
   {
@@ -32,7 +33,7 @@ const services = [
 
 export function Services() {
   return (
-    <Container size="lg" py={64} id="services" style={{ scrollMarginTop: 64 }}>
+    <Container size="lg" py={64} id={SECTION.services.id} style={{ scrollMarginTop: 64 }}>
       <Title order={2} ta="center">
         Our Services
       </Title>

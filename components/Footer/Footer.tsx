@@ -2,12 +2,13 @@
 
 import { Anchor, Box, Container, Group, Stack, Text, Title } from "@mantine/core";
 import { FiMail, FiMapPin } from "react-icons/fi";
+import { SECTION } from "../../contants/layout";
 
 export function Footer() {
   return (
     <Box
       component="footer"
-      id="contact"
+      id={SECTION.contact.id}
       py={48}
       style={{ borderTop: "1px solid var(--mantine-color-default-border)", scrollMarginTop: 64 }}
     >

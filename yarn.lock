@@ -1305,6 +1305,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@gfazioli/mantine-flip@npm:^4.0.15":
+  version: 4.0.15
+  resolution: "@gfazioli/mantine-flip@npm:4.0.15"
+  peerDependencies:
+    "@mantine/core": ">=9.0.0"
+    "@mantine/hooks": ">=9.0.0"
+    react: ^18.x || ^19.x
+    react-dom: ^18.x || ^19.x
+  checksum: 10c0/451b2825aceb6eb734204351f35004909ba7834a65b31d552dee15e03f11c03501532c53215744f715394ab06c50fe194619041f17d415faa315fc5ae47903ea
+  languageName: node
+  linkType: hard
+
 "@gfazioli/mantine-scene@npm:^2.2.11":
   version: 2.2.11
   resolution: "@gfazioli/mantine-scene@npm:2.2.11"
@@ -1587,6 +1599,20 @@ __metadata:
     "@jridgewell/resolve-uri": "npm:^3.1.0"
     "@jridgewell/sourcemap-codec": "npm:^1.4.14"
   checksum: 10c0/4b30ec8cd56c5fd9a661f088230af01e0c1a3888d11ffb6b47639700f71225be21d1f7e168048d6d4f9449207b978a235c07c8f15c07705685d16dc06280e9d9
+  languageName: node
+  linkType: hard
+
+"@mantine/carousel@npm:^9.6.3":
+  version: 9.6.3
+  resolution: "@mantine/carousel@npm:9.6.3"
+  peerDependencies:
+    "@mantine/core": 9.6.3
+    "@mantine/hooks": 9.6.3
+    embla-carousel: ">=8.0.0"
+    embla-carousel-react: ">=8.0.0"
+    react: ^19.2.0
+    react-dom: ^19.2.0
+  checksum: 10c0/a7c7ad7409291d87d98a9cf6c930e2bff35a9a5114dc582fc5e3b756d9a32329dfe557195b200960c64a814fe0f956bc29a3d91219c41c6d0c5e1ff1f1c74e1c
   languageName: node
   linkType: hard
 
@@ -2492,6 +2518,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"embla-carousel-react@npm:^8.5.2":
+  version: 8.6.0
+  resolution: "embla-carousel-react@npm:8.6.0"
+  dependencies:
+    embla-carousel: "npm:8.6.0"
+    embla-carousel-reactive-utils: "npm:8.6.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.1 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/461b0c427a6fca62e730c7b39d08e9c55b01a2138c173d5b9ebf77ec92092a900b45ac384731c77382b48d5d65946994d3abba6e9899a66d6e16f8ddf191ed1c
+  languageName: node
+  linkType: hard
+
+"embla-carousel-reactive-utils@npm:8.6.0":
+  version: 8.6.0
+  resolution: "embla-carousel-reactive-utils@npm:8.6.0"
+  peerDependencies:
+    embla-carousel: 8.6.0
+  checksum: 10c0/33d07e6df4d8dec9b4fc95858838ea2d5e5df078039c05b2a342c05ba4979d8d18564a1c607da445fed744daf969a0b5a90124ce487a854e86ced6f0458b51e9
+  languageName: node
+  linkType: hard
+
+"embla-carousel@npm:8.6.0, embla-carousel@npm:^8.5.2":
+  version: 8.6.0
+  resolution: "embla-carousel@npm:8.6.0"
+  checksum: 10c0/f4c598e7be28b70340d31ffd2bebb2472db370b0c81d9b089bf9555cf618695f35dc4a0694565c994c9ab972731123063f945aa09ff485df0df761d79c6a08ef
+  languageName: node
+  linkType: hard
+
 "entities@npm:^4.2.0, entities@npm:^4.4.0":
   version: 4.5.0
   resolution: "entities@npm:4.5.0"
@@ -2676,7 +2730,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "mantine-minimal-next-template@workspace:."
   dependencies:
+    "@gfazioli/mantine-flip": "npm:^4.0.15"
     "@gfazioli/mantine-scene": "npm:^2.2.11"
+    "@mantine/carousel": "npm:^9.6.3"
     "@mantine/colors-generator": "npm:^9.6.3"
     "@mantine/core": "npm:9.6.1"
     "@mantine/hooks": "npm:9.6.1"
@@ -2686,6 +2742,8 @@ __metadata:
     "@types/react": "npm:19.2.14"
     "@types/react-dom": "npm:^19.2.1"
     chroma-js: "npm:^3.2.0"
+    embla-carousel: "npm:^8.5.2"
+    embla-carousel-react: "npm:^8.5.2"
     next: "npm:16.2.2"
     oxc-config-mantine: "npm:^1.0.0"
     oxfmt: "npm:^0.71.0"

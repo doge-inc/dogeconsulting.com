@@ -2,7 +2,7 @@
 
 import { Anchor, AppShell, Container, Group, Text } from "@mantine/core";
 import { type CSSProperties } from "react";
-import { HEADER_HEIGHT, SECTIONS } from "../../contants/layout";
+import { HEADER_HEIGHT, SECTION } from "../../contants/layout";
 import { useScrollProgress } from "../../hooks/useScrollProgress";
 import Logo from "../../public/logo/doge-inc-logo.svg";
 import { ColorSchemeToggle } from "../ColorSchemeToggle/ColorSchemeToggle";
@@ -32,8 +32,8 @@ export function Header() {
 
           <Group gap="lg">
             <Group gap="lg" visibleFrom="sm">
-              {SECTIONS.map(({ href, label }) => (
-                <Anchor key={href} href={href} c="dimmed" fw={500}>
+              {Object.values(SECTION).map(({ id, label }) => (
+                <Anchor key={id} href={`#${id}`} c="dimmed" fw={500}>
                   {label}
                 </Anchor>
               ))}

@@ -4,8 +4,10 @@ import { theme } from "../theme";
 
 import "@mantine/core/styles.css";
 
+import "@gfazioli/mantine-flip/styles.css";
 import "@gfazioli/mantine-scene/styles.css";
-import "@gfazioli/mantine-scene/styles.layer.css";
+import "@mantine/carousel/styles.css";
+import "./global.css";
 
 export const metadata = {
   title: "Doge Consulting Inc.",

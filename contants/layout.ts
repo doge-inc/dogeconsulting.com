@@ -4,7 +4,19 @@
  */
 export const HEADER_HEIGHT = 120;
 
-export const SECTIONS = [
-  { href: "#services", label: "Services" },
-  { href: "#contact", label: "Contact" },
-] as const;
+export const SECTION = {
+    services: {
+        id: "services",
+        label: "Services",
+    },
+    projects: {
+        id: "projects",
+        label: "Projects",
+    },
+    contact: {
+        id: "contact",
+        label: "Contact",
+    },
+} as const;
+
+export type SECTION = typeof SECTION[keyof typeof SECTION];
