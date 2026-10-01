@@ -26,7 +26,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
-          href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Nanum+Gothic+Coding&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Clarity+City:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic+Coding&display=swap"
           rel="stylesheet"
         />
       </head>
