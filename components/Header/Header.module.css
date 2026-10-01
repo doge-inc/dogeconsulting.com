@@ -14,3 +14,13 @@ $logo-size-min: 32px;
   width: calc($logo-size-max - ($logo-size-max - $logo-size-min) * var(--header-shrink, 0));
   height: calc($logo-size-max - ($logo-size-max - $logo-size-min) * var(--header-shrink, 0));
 }
+
+@media (prefers-color-scheme: dark) {
+  .logo path:first-child {
+    fill: #92b7e7;
+  }
+}
+
+:root[data-mantine-color-scheme="dark"] .logo path:first-child {
+  fill: #92b7e7;
+}
