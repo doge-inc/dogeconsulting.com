@@ -1,0 +1,16 @@
+$header-height-max: 120px;
+$header-height-min: 64px;
+$logo-size-max: 100px;
+$logo-size-min: 32px;
+
+/* --header-shrink goes from 0 (top of page) to 1 (fully compact), set in Header.tsx */
+.header {
+  --app-shell-header-height: calc(
+    $header-height-max - ($header-height-max - $header-height-min) * var(--header-shrink, 0)
+  );
+}
+
+.logo {
+  width: calc($logo-size-max - ($logo-size-max - $logo-size-min) * var(--header-shrink, 0));
+  height: calc($logo-size-max - ($logo-size-max - $logo-size-min) * var(--header-shrink, 0));
+}
