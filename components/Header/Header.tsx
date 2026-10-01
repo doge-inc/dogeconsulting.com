@@ -24,7 +24,7 @@ export function Header() {
           <Anchor href="#" underline="never" c="inherit">
             <Group gap="xs">
               <Logo alt="Doge Consulting logo" className={classes.logo} />
-              <Text fw={700} size="lg">
+              <Text fw={700} size="lg" visibleFrom="sm">
                 Doge Consulting Inc.
               </Text>
             </Group>

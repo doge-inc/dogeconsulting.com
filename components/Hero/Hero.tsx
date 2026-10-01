@@ -4,11 +4,11 @@ import { Button, Container, Text, Title } from "@mantine/core";
 
 export function Hero() {
   return (
-    <Container size="lg" py={{ base: 64, sm: 120 }}>
+    <Container size="lg" py={{ base: 64, sm: 120 }} ta="center">
       <Title order={1} fz={{ base: 40, sm: 56 }}>
         Doge Consulting
       </Title>
-      <Text size="xl" c="dimmed" mt="md" maw={600}>
+      <Text size="xl" c="dimmed" mt="md" ta="center">
         Enterprise AI & Software Engineering. We help teams design, build, and ship better software,
         faster.
       </Text>
