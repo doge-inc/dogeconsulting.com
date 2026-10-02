@@ -32,11 +32,13 @@ export function Header() {
 
           <Group gap="lg">
             <Group gap="lg" visibleFrom="sm">
-              {Object.values(SECTION).map(({ id, label }) => (
-                <Anchor key={id} href={`#${id}`} c="dimmed" fw={500}>
-                  {label}
-                </Anchor>
-              ))}
+              {Object.values(SECTION)
+                .filter(({ enabled }) => enabled)
+                .map(({ id, label }) => (
+                  <Anchor key={id} href={`#${id}`} c="dimmed" fw={500}>
+                    {label}
+                  </Anchor>
+                ))}
             </Group>
             <ColorSchemeToggle />
           </Group>

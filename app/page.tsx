@@ -1,12 +1,9 @@
 "use client";
 
 import { AppShell } from "@mantine/core";
-import { Footer } from "../components/Footer/Footer";
 import { Header } from "../components/Header/Header";
 import { Hero } from "../components/Hero/Hero";
-import { Projects } from "../components/Projects/Projects";
-import { Services } from "../components/Services/Services";
-import { HEADER_HEIGHT } from "../contants/layout";
+import { HEADER_HEIGHT, SECTION } from "../contants/layout";
 
 export default function HomePage() {
   return (
@@ -14,9 +11,12 @@ export default function HomePage() {
       <Header />
       <AppShell.Main>
         <Hero />
-        <Services />
-        <Projects />
-        <Footer />
+
+        {Object.values(SECTION)
+          .filter(({ enabled }) => enabled)
+          .map(({ id, Component }) => (
+            <Component key={id} />
+          ))}
       </AppShell.Main>
     </AppShell>
   );
