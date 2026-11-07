@@ -1,0 +1,17 @@
+.container {
+  scroll-margin-top: 64px;
+}
+
+.carouselControls {
+  top: auto;
+  bottom: 0;
+}
+
+.carouselIndicators {
+  bottom: 14px;
+}
+
+.carouselIndicator {
+  width: 16px;
+  background-color: var(--mantine-color-dogeReversed-filled);
+}

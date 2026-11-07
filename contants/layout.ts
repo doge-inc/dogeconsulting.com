@@ -19,7 +19,7 @@ export const SECTION = {
         id: "projects",
         label: "Projects",
         Component: Projects,
-        enabled: false
+        enabled: true
     },
     contact: {
         id: "contact",

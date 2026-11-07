@@ -1,0 +1,132 @@
+{
+  "projects": [
+    {
+      "client": "Industrial and commercial space",
+      "title": "AI-native platform for short-term industrial and commercial space",
+      "summary": "Prototype of an AI-native application for short-term industrial and commercial space.",
+      "results": [
+        "Developed the prototype on Anthropic Claude models.",
+        "Used function calling in the application.",
+        "Implemented RAG with Chroma DB."
+      ],
+      "tags": ["Anthropic Claude", "Chroma DB", "Function calling", "RAG"]
+    },
+    {
+      "client": "Leading tax preparation software",
+      "title": "Tax filing product launches and modernization",
+      "summary": "New products, a new pricing model and a redesigned experience across a leading tax preparation software in Canada and the US, helping people and small businesses file with less effort.",
+      "highlight": {
+        "value": "80%+",
+        "label": "cut from a tax estimation service's response times"
+      },
+      "results": [
+        "Redesigned the Canadian online product's navigation around a central hub that shows filers their progress and best next step.",
+        "Launched online corporate tax filing for Canadian small businesses, with server-side rendering for faster, more searchable pages.",
+        "Launched a full-service offering in Canada, connecting filers with tax experts through chat, document upload, ID verification and digital signing.",
+        "Introduced pricing based on tax complexity instead of features, automatically matching each customer with the right product.",
+        "Expanded automatic import of US tax forms, reducing manual entry and improving accuracy.",
+        "Rebuilt new-user onboarding, modernized the front-end architecture and unified self-help in Canada.",
+        "Helped launch a free filing product, cut a tax estimation service's response times by over 80%, and won an internal hackathon's People's Choice Award for an early AI-style prototype."
+      ],
+      "tags": ["React", "TypeScript", "Node.js", "Java", "Kotlin"]
+    },
+    {
+      "client": "Global bank, rates trading",
+      "title": "Real-time trading desktop platform",
+      "summary": "A high-performance desktop platform that gives rates traders live financial data in customizable, tabbed workspaces.",
+      "highlight": {
+        "value": "30s → 2–3s",
+        "label": "developer wait time, down from about 30 seconds"
+      },
+      "results": [
+        "Built the desktop foundation that hosts modular trading apps, remembers each user's windows and layouts, and lets apps communicate with each other.",
+        "Improved speed and reliability by tuning live data updates, restoring complex saved layouts more dependably and removing rendering bottlenecks.",
+        "Reduced startup time by loading features on demand.",
+        "Cut developer wait times from about 30 seconds to 2–3 seconds by letting engineers run individual apps locally.",
+        "Upgraded core frameworks across the platform to close security vulnerabilities, and built shared component libraries that keep teams consistent."
+      ],
+      "tags": ["Electron", "Angular", "NgRx", "ag-Grid", "Web Components"]
+    },
+    {
+      "client": "Major Canadian banks",
+      "title": "Faster, more useful tools for bank staff",
+      "summary": "Front-line, analytics and mobile solutions that put the right information in front of bank employees and customers sooner.",
+      "highlight": {
+        "value": "80%",
+        "label": "cut from page load times on a call center application"
+      },
+      "results": [
+        "Built a portal that shows tens of thousands of front-line employees the information relevant to their role and location.",
+        "Rebuilt an app store-style business intelligence platform, cutting load times by 60% on desktop and 80% on mobile.",
+        "Cut page load times by 80% on a call center application, improving response times.",
+        "Delivered two working mobile banking prototypes, for phone and tablet, in 30 hours."
+      ],
+      "tags": ["AngularJS", "ASP.NET Web API", "SharePoint", "PhoneGap"]
+    },
+    {
+      "client": "Tier-1 bank, capital markets sales",
+      "title": "360-degree client insights platform",
+      "summary": "A responsive web platform that gives the bank's sales team a complete view of each client in one place.",
+      "highlight": {
+        "value": "90%+",
+        "label": "unit test coverage across critical components"
+      },
+      "results": [
+        "Built a modular framework that lets independent teams publish plug-and-play components to customizable dashboards.",
+        "Created reusable Material Design components, improving consistency and speeding up delivery.",
+        "Kept unit test coverage above 90% across critical components."
+      ],
+      "tags": ["Responsive web", "Modular UI", "Material Design"]
+    },
+    {
+      "client": "Tier-1 bank, capital markets",
+      "title": "Unified trading desktop",
+      "summary": "A single workspace where trading and operations teams run connected apps and automated workflows across fixed income, foreign exchange and commodities.",
+      "results": [
+        "Grew from a pilot on one desk into a platform serving metals, energy, global FX, FX options and operations teams.",
+        "Moved core workflows out of heavyweight systems of record and into a workspace traders can shape themselves.",
+        "Brought trade automation to multiple desks.",
+        "Enabled collaborative auctions and real-time inventory management for precious metals."
+      ],
+      "tags": [
+        "Trading platform",
+        "Desktop interoperability",
+        "Workflow automation",
+        "Real-time data"
+      ]
+    },
+    {
+      "client": "Global financial institution",
+      "title": "Software delivery tracking platform",
+      "summary": "An internal platform that tracks every stage of software development, automates key processes and generates reports.",
+      "results": [
+        "Added organization management, project tracking and integrated workflows.",
+        "Built reports covering complex data and its full change history.",
+        "Streamlined deployments across test and production environments."
+      ],
+      "tags": ["ASP.NET MVC", "Knockout", "TypeScript", "SQL Server"]
+    },
+    {
+      "client": "Insurance and reinsurance providers",
+      "title": "Modern tools for underwriters and brokers",
+      "summary": "Web and mobile applications that replace legacy systems and give insurance professionals quick access to the information they need.",
+      "results": [
+        "Built a portal that brings reports, data from multiple systems and enterprise search together for underwriters.",
+        "Replaced legacy Lotus Notes systems with modern web applications for tracking and processing forms and questionnaires.",
+        "Published a broker mobile app to Google Play and the App Store, with secure credential handling and more customer data."
+      ],
+      "tags": ["AngularJS", "ASP.NET", "Tableau", "Sencha Touch"]
+    },
+    {
+      "client": "Global consumer device brand",
+      "title": "Self-service customer support site",
+      "summary": "A multilingual help site, built from the ground up, where customers can solve device questions themselves through troubleshooting articles, guides and tutorials.",
+      "results": [
+        "Delivered in a short timeframe by a small, focused team, pairing a content management system with a rich, responsive front end.",
+        "Built fast search with filtering by article type, product, category and language.",
+        "Automated site configuration with one click during deployment, and added custom modules for analytics, redirects and surveys."
+      ],
+      "tags": ["Orchard CMS", "ASP.NET MVC", "Knockout", "Lucene"]
+    }
+  ]
+}
