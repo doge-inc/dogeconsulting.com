@@ -2,6 +2,12 @@
   scroll-margin-top: 64px;
 }
 
+.highlightValue {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
 .carouselControls {
   top: auto;
   bottom: 0;
@@ -13,5 +19,9 @@
 
 .carouselIndicator {
   width: 16px;
-  background-color: var(--mantine-color-dogeReversed-filled);
+  background-color: var(--doge-navy);
+}
+
+:root[data-mantine-color-scheme="dark"] .carouselIndicator {
+  background-color: var(--doge-sky);
 }

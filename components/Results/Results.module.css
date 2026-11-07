@@ -1,0 +1,59 @@
+.value.value {
+  color: var(--mantine-color-text);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+/* Card's overflow: hidden would make it the scroll container for the bars' view() timeline. */
+.meterCard.meterCard {
+  overflow: clip;
+}
+
+.track {
+  height: 10px;
+  margin-top: 6px;
+}
+
+.barBefore,
+.barAfter {
+  height: 100%;
+  border-radius: 0 4px 4px 0;
+  transform-origin: left;
+}
+
+.barBefore {
+  width: 100%;
+  background: #868e96;
+}
+
+.barAfter {
+  background: var(--doge-navy);
+}
+
+:root[data-mantine-color-scheme="dark"] .barBefore {
+  background: #8b9bb0;
+}
+
+:root[data-mantine-color-scheme="dark"] .barAfter {
+  background: var(--doge-sky);
+}
+
+/* The bar shrinks from the "before" length to its real value as the card scrolls into view. */
+@keyframes shrink-to-result {
+  from {
+    transform: scaleX(var(--meter-from));
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .barAfter {
+      animation: shrink-to-result cubic-bezier(0.3, 0.7, 0.3, 1) both;
+      /* Ends a fixed distance after entering, so the bar always settles on its true length. */
+      animation-timeline: view(block 0px 15%);
+      animation-range: entry 0px entry 220px;
+    }
+  }
+}

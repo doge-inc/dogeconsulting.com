@@ -1,24 +1,71 @@
 "use client";
 
 import { Scene } from "@gfazioli/mantine-scene";
-import { Button, Container, Text, Title } from "@mantine/core";
+import { Box, Button, Container, Group, Text, Title } from "@mantine/core";
+import { mailtoFor } from "../../contants/contact";
+import { SECTION } from "../../contants/layout";
+import MapleOutline from "../../public/logo/maple-outline.svg";
+import ctaClasses from "../Cta/Cta.module.css";
+import classes from "./Hero.module.css";
+
+const AURORA_COLORS = ["#92b7e7", "#5c92d9", "#7fd4e8", "#9c3f63"];
+const FACTS = [
+  "Capital markets",
+  "Banking",
+  "Insurance",
+  "Financial software",
+  "Consumer devices",
+  "Est. 2015",
+  "Toronto",
+];
 
 export function Hero() {
   return (
-    <Container size="lg" py={{ base: 64, sm: 120 }} ta="center">
+    <Box component="section" id="top" data-nav-section className={classes.hero}>
       <Scene lazy lazyThreshold={0.1}>
-        <Scene.StarField count={150} color="blue.9" seed={20} opacity={0.8} />
+        <Scene.Aurora colors={AURORA_COLORS} bands={4} duration={16} opacity={0.45} blur={70} />
+        <Scene.StarField count={120} color="white" seed={20} opacity={0.7} />
       </Scene>
-      <Title order={1} fz={{ base: 40, sm: 56 }}>
-        Doge Consulting
-      </Title>
-      <Text size="xl" c="dimmed" mt="md" ta="center">
-        Enterprise AI & Software Engineering. We help teams design, build, and ship better software,
-        faster.
-      </Text>
-      <Button component="a" href="mailto:hello@dogeconsulting.com" size="lg" mt="xl">
-        Get in touch
-      </Button>
-    </Container>
+      <MapleOutline aria-hidden className={classes.maple} />
+
+      <Container size="lg" className={classes.content}>
+        <Text className={`${classes.eyebrow} ${classes.rise}`} ff="monospace">
+          FETCH. BUILD. SHIP.
+        </Text>
+        <Title order={1} className={`${classes.title} ${classes.rise}`}>
+          Your hardest software, in production.
+        </Title>
+        <Text className={`${classes.subhead} ${classes.rise}`}>
+          Doge Consulting has shipped trading platforms, tax products and banking tools since 2015.
+          Now we help enterprise teams put AI to work and deliver faster.
+        </Text>
+        <Group justify="center" mt={40} className={classes.rise}>
+          <Button
+            component="a"
+            href={mailtoFor("Project inquiry: hero")}
+            size="lg"
+            radius="md"
+            className={ctaClasses.onDark}
+          >
+            Email us about your project
+          </Button>
+          <Button
+            component="a"
+            href={`#${SECTION.results.id}`}
+            size="lg"
+            radius="md"
+            className={ctaClasses.ghostOnDark}
+          >
+            See the results
+          </Button>
+        </Group>
+
+        <ul className={`${classes.facts} ${classes.rise}`}>
+          {FACTS.map((fact) => (
+            <li key={fact}>{fact}</li>
+          ))}
+        </ul>
+      </Container>
+    </Box>
   );
 }

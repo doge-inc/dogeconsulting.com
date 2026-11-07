@@ -1,0 +1,51 @@
+/* Filled buttons on page surfaces, which change with the color scheme. */
+.onSurface.onSurface {
+  --cta-bg: var(--doge-navy);
+  --cta-bg-hover: #143a6b;
+  --cta-fg: #fff;
+
+  background: var(--cta-bg);
+  color: var(--cta-fg);
+  transition:
+    transform 150ms ease,
+    background-color 150ms ease;
+
+  &:hover {
+    background: var(--cta-bg-hover);
+    transform: translateY(-1px);
+  }
+}
+
+:root[data-mantine-color-scheme="dark"] .onSurface.onSurface {
+  --cta-bg: var(--doge-sky);
+  --cta-bg-hover: #aecbf0;
+  --cta-fg: var(--doge-navy);
+}
+
+/* Filled buttons on the navy surfaces, which stay navy in both color schemes. */
+.onDark.onDark {
+  background: var(--doge-sky);
+  color: var(--doge-navy);
+  transition:
+    transform 150ms ease,
+    background-color 150ms ease;
+
+  &:hover {
+    background: #aecbf0;
+    transform: translateY(-1px);
+  }
+}
+
+.ghostOnDark.ghostOnDark {
+  background: transparent;
+  border: 1px solid rgb(199 214 234 / 55%);
+  color: #fff;
+  transition:
+    transform 150ms ease,
+    background-color 150ms ease;
+
+  &:hover {
+    background: rgb(255 255 255 / 10%);
+    transform: translateY(-1px);
+  }
+}

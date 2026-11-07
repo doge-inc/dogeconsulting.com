@@ -26,15 +26,21 @@ Every push to `main` deploys to production on GitHub Pages (`.github/workflows/d
 
 ## Architecture
 
-**Sections are driven by a registry.** `SECTION` in `contants/layout.ts` (the directory name is misspelled; imports depend on it) lists each section's `id`, nav `label`, `Component`, and `enabled` flag. `app/page.tsx` renders the enabled sections and `components/Header/Header.tsx` builds the nav links from the same list, so `enabled` controls both. `Hero` sits outside the registry and is always rendered first. Projects is currently a disabled placeholder.
+**Sections are driven by a registry.** `SECTION` in `contants/layout.ts` (the directory name is misspelled; imports depend on it) lists each section's `id`, nav `label`, `Component`, and `enabled` flag. `app/page.tsx` renders the enabled sections and `components/Header/Header.tsx` builds the nav links from the same list, so `enabled` controls both. `Hero` sits outside the registry and is always rendered first. About is disabled until `components/About/About.tsx` has the real founder details.
 
-To add a section, add a `SECTION` entry and have the component set `id={SECTION.<key>.id}` on its root, plus `scrollMarginTop` so anchor links clear the fixed header.
+To add a section, add a `SECTION` entry and have the component set `id={SECTION.<key>.id}` and `data-nav-section` on its root (the header's active link reads it), plus `scrollMarginTop` so anchor links clear the fixed header.
 
 **Circular import.** `contants/layout.ts` imports the section components, and they import `SECTION` back from it. This only works because components read `SECTION` at render time, so don't read it at a section module's top level.
 
 **Header shrink on scroll spans three files.** `hooks/useScrollProgress.ts` produces a 0 to 1 value, `Header.tsx` passes it as the `--header-shrink` CSS variable, and `Header.module.css` uses it to interpolate the header and logo sizes. The heights are duplicated and must be kept in sync by hand: `HEADER_HEIGHT` (`contants/layout.ts`) and `SHRINK_HEADER_HEIGHT` (`Header.tsx`) must match `$header-height-max` and `$header-height-min` in the CSS module.
 
-**Theming.** `theme.ts` defines `doge` (the primary color) and `dogeReversed` as Mantine virtual colors that swap palettes between light and dark schemes. Prefer these over literal colors so both schemes keep working. The color scheme defaults to `auto`.
+**Theming.** `theme.ts` defines `doge` (the primary color) and `dogeReversed` as Mantine virtual colors that swap palettes between light and dark schemes. Prefer these over literal colors so both schemes keep working. The color scheme defaults to `auto`. The header, hero and contact band stay navy in both schemes; `components/Cta/Cta.module.css` holds the button styles for navy and page surfaces, and `app/global.css` holds the brand tokens.
+
+**Client confidentiality.** The repo is public and clients are anonymized on purpose. Never put client or client product names in site copy, data, or commit history.
+
+**Motion.** Scroll reveals use the global `.reveal` class (`app/global.css`), a CSS scroll-driven animation with no JavaScript, so content stays visible where it is unsupported. Gate all animation behind `prefers-reduced-motion: no-preference`.
+
+**Contact.** Email is the only contact path. Build CTA links with `mailtoFor(subject)` from `contants/contact.ts`, giving each CTA its own subject, since subject lines are the only record of which CTA produced an inquiry.
 
 **Styling.** Use Mantine style props first, and CSS modules beside the component for anything beyond them. `postcss.config.cjs` enables `postcss-preset-mantine` and `postcss-simple-vars`, so `$variables` and `$mantine-breakpoint-*` work in CSS files. Styles for a new Mantine extension package must be imported in `app/layout.tsx`.
 

@@ -1,13 +1,17 @@
 $header-height-max: 120px;
 $header-height-min: 64px;
 $logo-size-max: 100px;
-$logo-size-min: 32px;
+$logo-size-min: 44px;
 
 /* --header-shrink goes from 0 (top of page) to 1 (fully compact), set in Header.tsx */
-.header {
+.header.header {
   --app-shell-header-height: calc(
     $header-height-max - ($header-height-max - $header-height-min) * var(--header-shrink, 0)
   );
+  --app-shell-border-color: rgb(146 183 231 / 18%);
+
+  background: rgb(10 36 70 / 95%);
+  backdrop-filter: blur(10px);
 }
 
 .logo {
@@ -15,6 +19,23 @@ $logo-size-min: 32px;
   height: calc($logo-size-max - ($logo-size-max - $logo-size-min) * var(--header-shrink, 0));
 }
 
-:root[data-mantine-color-scheme="dark"] .logo path:first-child {
-  fill: #92b7e7;
+/* The header stays navy in both color schemes, so the logo's navy dog needs a light fill. */
+.logo path:first-child {
+  fill: var(--doge-sky);
+}
+
+.navLink.navLink {
+  color: var(--doge-ink-on-navy);
+  text-underline-offset: 6px;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &[data-active] {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: var(--doge-maple);
+    text-decoration-thickness: 2px;
+  }
 }

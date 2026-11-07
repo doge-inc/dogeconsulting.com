@@ -2,20 +2,28 @@
 
 import { Flip } from "@gfazioli/mantine-flip";
 import { Carousel } from "@mantine/carousel";
-import { Badge, Button, Card, Container, Group, Text, Title } from "@mantine/core";
+import { Anchor, Badge, Button, Card, Container, Group, Text, Title } from "@mantine/core";
+import { mailtoFor } from "../../contants/contact";
 import { SECTION } from "../../contants/layout";
+import ctaClasses from "../Cta/Cta.module.css";
 import { ProjectResults } from "./ProjectResults";
 import { projects } from "./projects.json";
 import styles from "./Projects.module.css";
 
 export function Projects() {
   return (
-    <Container size="lg" py={64} id={SECTION.projects.id} className={styles.container}>
-      <Title order={2} ta="center">
+    <Container
+      size="lg"
+      py={64}
+      id={SECTION.projects.id}
+      data-nav-section
+      className={styles.container}
+    >
+      <Title order={2} ta="center" className="reveal">
         Our Projects
       </Title>
-      <Text c="dimmed" ta="center" mt="sm" mb={48}>
-        Selected work delivered for enterprise teams
+      <Text c="dimmed" ta="center" mt="sm" mb={48} className="reveal">
+        Selected work delivered for enterprise teams. Flip a card to see the results.
       </Text>
 
       <Carousel
@@ -33,8 +41,8 @@ export function Projects() {
         }}
       >
         {projects.map((project) => (
-          <Carousel.Slide key={project.client}>
-            <Flip w="100%" h={{ base: 350, xs: 400, sm: 400, lg: 320 }} easing="spring">
+          <Carousel.Slide key={project.title}>
+            <Flip w="100%" h={{ base: 500, xs: 430, sm: 410, lg: 400 }} easing="spring">
               <Flip.Front>
                 <Card withBorder radius="md" padding="lg" h="100%">
                   <Text size="sm" fw={700} c="dimmed" tt="uppercase">
@@ -43,6 +51,15 @@ export function Projects() {
                   <Title order={3} size="h4" mt="xs">
                     {project.title}
                   </Title>
+
+                  {project.highlight && (
+                    <Text mt="md">
+                      <span className={styles.highlightValue}>{project.highlight.value}</span>{" "}
+                      <Text span size="sm" c="dimmed">
+                        {project.highlight.label}
+                      </Text>
+                    </Text>
+                  )}
 
                   <Text c="dimmed" mt="md">
                     {project.summary}
@@ -58,7 +75,9 @@ export function Projects() {
 
                   <Group justify="right" pt="md">
                     <Flip.Target>
-                      <Button radius="md">More Info</Button>
+                      <Button radius="md" className={ctaClasses.onSurface}>
+                        See results
+                      </Button>
                     </Flip.Target>
                   </Group>
                 </Card>
@@ -74,9 +93,18 @@ export function Projects() {
 
                   <ProjectResults results={project.results} />
 
-                  <Group justify="right" mt="auto" pt="md">
+                  <Group justify="space-between" mt="auto" pt="md">
+                    <Anchor
+                      href={mailtoFor(`Project inquiry: similar to ${project.title}`)}
+                      fw={600}
+                      size="sm"
+                    >
+                      Need something similar?
+                    </Anchor>
                     <Flip.Target>
-                      <Button radius="md">Back</Button>
+                      <Button radius="md" className={ctaClasses.onSurface}>
+                        Back
+                      </Button>
                     </Flip.Target>
                   </Group>
                 </Card>

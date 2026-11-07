@@ -1,0 +1,57 @@
+.card {
+  position: relative;
+  transition:
+    transform 200ms ease,
+    border-color 200ms ease;
+
+  & > * {
+    position: relative;
+  }
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: var(--mantine-spacing-md);
+
+  & svg {
+    transition: transform 150ms ease;
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+  }
+}
+
+@media (hover: hover) {
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      280px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+      rgb(146 183 231 / 28%),
+      transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 200ms ease;
+    pointer-events: none;
+  }
+
+  .card:hover::before {
+    opacity: 1;
+  }
+
+  .card:hover {
+    border-color: var(--doge-sky);
+    transform: translateY(-3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover {
+    transform: none;
+  }
+}
