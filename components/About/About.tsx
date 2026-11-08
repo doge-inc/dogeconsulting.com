@@ -2,15 +2,7 @@
 
 import { Avatar, Container, Group, Stack, Text, Title } from "@mantine/core";
 import { SECTION } from "../../contants/layout";
-
-// Placeholders: replace all three, then set `enabled: true` for this section in contants/layout.ts.
-// Keep the bio free of client names.
-const FOUNDER = {
-  name: "Founder name",
-  role: "Founder",
-  bio: "Founder bio goes here.",
-  photo: null as string | null,
-};
+import { founder as FOUNDER } from "./about.json";
 
 export function About() {
   return (
@@ -21,12 +13,16 @@ export function About() {
       data-nav-section
       style={{ scrollMarginTop: 64 }}
     >
-      <Group gap="xl" align="center" wrap="wrap" justify="center">
+      <Group gap="xl" align="center" wrap="wrap" justify="center" className="reveal">
         <Avatar src={FOUNDER.photo} alt={FOUNDER.name} size={160} radius="50%" />
         <Stack gap="xs" flex="1 1 320px">
           <Title order={2}>{FOUNDER.name}</Title>
           <Text fw={600}>{FOUNDER.role}</Text>
-          <Text c="dimmed">{FOUNDER.bio}</Text>
+          {FOUNDER.bio.map((paragraph) => (
+            <Text key={paragraph} c="dimmed">
+              {paragraph}
+            </Text>
+          ))}
         </Stack>
       </Group>
     </Container>

@@ -26,7 +26,7 @@ Every push to `main` deploys to production on GitHub Pages (`.github/workflows/d
 
 ## Architecture
 
-**Sections are driven by a registry.** `SECTION` in `contants/layout.ts` (the directory name is misspelled; imports depend on it) lists each section's `id`, nav `label`, `Component`, and `enabled` flag. `app/page.tsx` renders the enabled sections and `components/Header/Header.tsx` builds the nav links from the same list, so `enabled` controls both. `Hero` sits outside the registry and is always rendered first. About is disabled until `components/About/About.tsx` has the real founder details.
+**Sections are driven by a registry.** `SECTION` in `contants/layout.ts` (the directory name is misspelled; imports depend on it) lists each section's `id`, nav `label`, `Component`, and `enabled` flag. `app/page.tsx` renders the enabled sections and `components/Header/Header.tsx` builds the nav links from the same list, so `enabled` controls both. `Hero` sits outside the registry and is always rendered first.
 
 To add a section, add a `SECTION` entry and have the component set `id={SECTION.<key>.id}` and `data-nav-section` on its root (the header's active link reads it), plus `scrollMarginTop` so anchor links clear the fixed header.
 

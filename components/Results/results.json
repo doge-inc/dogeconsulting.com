@@ -1,0 +1,28 @@
+{
+  "meters": [
+    {
+      "value": "30s → 2-3s",
+      "label": "Developer wait time on a global bank's trading platform",
+      "before": "About 30 seconds",
+      "after": "2-3 seconds",
+      "afterPercent": 10
+    },
+    {
+      "value": "80%",
+      "label": "Cut from page load times on a bank's call center application",
+      "before": "Before",
+      "after": "80% less",
+      "afterPercent": 20
+    }
+  ],
+  "stats": [
+    {
+      "value": "2 prototypes in 30 hours",
+      "label": "Working mobile banking apps, for phone and tablet"
+    },
+    {
+      "value": "Tens of thousands",
+      "label": "Front-line bank employees served by one portal"
+    }
+  ]
+}

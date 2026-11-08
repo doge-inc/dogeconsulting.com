@@ -3,36 +3,8 @@
 import { Box, Card, Container, SimpleGrid, Text, Title } from "@mantine/core";
 import { type CSSProperties } from "react";
 import { SECTION } from "../../contants/layout";
+import { meters as METERS, stats as STATS } from "./results.json";
 import classes from "./Results.module.css";
-
-const METERS = [
-  {
-    value: "30s → 2–3s",
-    label: "Developer wait time on a global bank's trading platform",
-    before: "About 30 seconds",
-    after: "2–3 seconds",
-    // Drawn at 3s of 30s, the conservative end of the range.
-    afterPercent: 10,
-  },
-  {
-    value: "80%",
-    label: "Cut from page load times on a bank's call center application",
-    before: "Before",
-    after: "80% less",
-    afterPercent: 20,
-  },
-];
-
-const STATS = [
-  {
-    value: "2 prototypes in 30 hours",
-    label: "Working mobile banking apps, for phone and tablet",
-  },
-  {
-    value: "Tens of thousands",
-    label: "Front-line bank employees served by one portal",
-  },
-];
 
 export function Results() {
   return (
@@ -76,6 +48,8 @@ export function Results() {
                 {meter.after}
               </Text>
               <div className={classes.track} aria-hidden>
+                {/* afterPercent is the "after" bar as a percent of "before". For a range,
+                    use its conservative end (30s → 2–3s is drawn at 3s of 30s). */}
                 <div
                   className={classes.barAfter}
                   style={

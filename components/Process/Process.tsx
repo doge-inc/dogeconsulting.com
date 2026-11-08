@@ -2,22 +2,8 @@
 
 import { Box, Container, Text, Title } from "@mantine/core";
 import { SECTION } from "../../contants/layout";
+import { steps as STEPS } from "./process.json";
 import classes from "./Process.module.css";
-
-const STEPS = [
-  {
-    title: "Fetch",
-    description: "We dig into your code, constraints and goals, and bring back what matters.",
-  },
-  {
-    title: "Build",
-    description: "We work alongside your team, shipping in small, reviewable steps.",
-  },
-  {
-    title: "Ship",
-    description: "Into production, with your team ready to own it.",
-  },
-];
 
 export function Process() {
   return (

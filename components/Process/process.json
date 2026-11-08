@@ -1,0 +1,16 @@
+{
+  "steps": [
+    {
+      "title": "Fetch",
+      "description": "We dig into your code, constraints and goals, and bring back what matters."
+    },
+    {
+      "title": "Build",
+      "description": "We work alongside your team, shipping in small, reviewable steps."
+    },
+    {
+      "title": "Ship",
+      "description": "Into production, with your team ready to own it."
+    }
+  ]
+}

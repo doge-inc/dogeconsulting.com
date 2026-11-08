@@ -1,0 +1,11 @@
+{
+  "founder": {
+    "name": "Dmitriy Tychshenko",
+    "role": "Founder & Software Engineer",
+    "bio": [
+      "I'm a software engineer with 15 years of experience. I founded Doge Consulting in 2015 and have since helped global and Tier-1 banks, a leading tax preparation software company, insurance and reinsurance providers, a global consumer device brand, and an AI-native commercial real estate startup ship software their teams rely on.",
+      "In my spare time I drum, cook, camp and spend time outdoors with my wife and kids."
+    ],
+    "photo": "/about/founder.jpg"
+  }
+}

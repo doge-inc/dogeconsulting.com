@@ -1,0 +1,24 @@
+{
+  "services": [
+    {
+      "icon": "compass",
+      "title": "Consultancy",
+      "description": "Make the big technical calls with confidence, with strategy, architecture reviews and hands-on guidance."
+    },
+    {
+      "icon": "box",
+      "title": "Product Development",
+      "description": "Get from first prototype to production-ready platform, with design and delivery handled end to end."
+    },
+    {
+      "icon": "cpu",
+      "title": "AI Integration",
+      "description": "Put LLMs to work in your products and internal workflows, in a way that's practical and reliable."
+    },
+    {
+      "icon": "git-merge",
+      "title": "Dev Process Integration & Optimization",
+      "description": "Ship faster with fewer surprises, by streamlining CI/CD, tooling and team workflows."
+    }
+  ]
+}

@@ -24,7 +24,7 @@ export function Hero() {
     <Box component="section" id="top" data-nav-section className={classes.hero}>
       <Scene lazy lazyThreshold={0.1}>
         <Scene.Aurora colors={AURORA_COLORS} bands={4} duration={16} opacity={0.45} blur={70} />
-        <Scene.StarField count={120} color="white" seed={20} opacity={0.7} />
+        <Scene.StarField count={300} color="white" seed={100} opacity={0.7} />
       </Scene>
       <MapleOutline aria-hidden className={classes.maple} />
 

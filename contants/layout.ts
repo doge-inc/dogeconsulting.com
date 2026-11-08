@@ -12,43 +12,42 @@ import { Services } from "../components/Services/Services";
 export const HEADER_HEIGHT = 120;
 
 export const SECTION = {
-    results: {
-        id: "results",
-        label: "Results",
-        Component: Results,
-        enabled: true,
-    },
-    services: {
-        id: "services",
-        label: "Services",
-        Component: Services,
-        enabled: true,
-    },
-    process: {
-        id: "process",
-        label: "Process",
-        Component: Process,
-        enabled: true,
-    },
-    projects: {
-        id: "projects",
-        label: "Projects",
-        Component: Projects,
-        enabled: true
-    },
-    about: {
-        id: "about",
-        label: "About",
-        Component: About,
-        // Holds placeholder content. Enable once About.tsx has the real founder details.
-        enabled: false,
-    },
-    contact: {
-        id: "contact",
-        label: "Contact",
-        Component: Footer,
-        enabled: true
-    },
+  results: {
+    id: "results",
+    label: "Results",
+    Component: Results,
+    enabled: true,
+  },
+  services: {
+    id: "services",
+    label: "Services",
+    Component: Services,
+    enabled: true,
+  },
+  process: {
+    id: "process",
+    label: "Process",
+    Component: Process,
+    enabled: true,
+  },
+  projects: {
+    id: "projects",
+    label: "Projects",
+    Component: Projects,
+    enabled: true,
+  },
+  about: {
+    id: "about",
+    label: "About",
+    Component: About,
+    enabled: true,
+  },
+  contact: {
+    id: "contact",
+    label: "Contact",
+    Component: Footer,
+    enabled: true,
+  },
 } as const;
 
-export type SECTION = typeof SECTION[keyof typeof SECTION];
+export type SECTION = (typeof SECTION)[keyof typeof SECTION];
