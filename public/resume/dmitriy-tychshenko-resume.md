@@ -8,7 +8,7 @@ Toronto, ON · [(647) 878-4647](tel:+16478784647) · [dmitriy@dogeconsulting.com
 
 ## Summary
 
-Principal-level full stack engineer and tech lead with 15 years of building high-traffic financial software at TD Securities, Intuit (TurboTax), Citi, RBC Capital Markets and other leading Canadian banks. Currently building TD Securities' FICC Unified Desktop, an interop-based trading platform, across the front end, back end, infrastructure, DevOps and AI integration. Previously led development of an AI-native product prototype using LLM function calling and retrieval-augmented generation (RAG). Turns business goals into clear technical plans, raises the engineering bar, and takes products from prototype to production. Founder of Doge Consulting Inc. (est. 2015).
+Principal-level full stack engineer and tech lead with 15+ years of building large-scale, high-performance web applications for enterprise, financial and consumer platforms. Deep expertise in architecture, performance optimization and developer productivity, focused on React, Node.js and TypeScript. Now bringing AI into products, with hands-on experience in LLM function calling, the Model Context Protocol (MCP) and retrieval-augmented generation (RAG), including leading an AI-native product prototype. Loves diving into complex problems, from refactoring legacy code to architecting micro-frontend systems that actually scale, and taking products from idea to production. Founder of Doge Consulting Inc. (est. 2015).
 
 ## Highlights
 
